@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="FamiliarResource" load_steps=7 format=3 uid="uid://ey6ad0yggbs8"]
+
+[ext_resource type="Script" uid="uid://b8jaubc2gdxts" path="res://Scripts/FamiliarResource.gd" id="1_4vb1y"]
+[ext_resource type="Texture2D" uid="uid://o8m5532743e" path="res://Assets/graficos/IconesItens/Familiar_Inventory_Icon.png" id="1_lrg6g"]
+[ext_resource type="Texture2D" uid="uid://bt86mwkmcecwf" path="res://Assets/graficos/FamiliarGraficos/Xatosh.png" id="3_etfvg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_deo40"]
+atlas = ExtResource("1_lrg6g")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stn33"]
+atlas = ExtResource("3_etfvg")
+region = Rect2(8, 208, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3yxd"]
+atlas = ExtResource("3_etfvg")
+region = Rect2(64, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_4vb1y")
+nome = "Xartosh"
+descricao = "Gecko de fogo
+"
+sprite_frente = SubResource("AtlasTexture_i3yxd")
+sprite_costas = SubResource("AtlasTexture_stn33")
+icone = SubResource("AtlasTexture_deo40")
+vida_maxima = 70
+ataque = 60
+defesa = 55
+velocidade = 85
+ataque_especial = 75
+defesa_especial = 70
+metadata/_custom_type_script = "uid://b8jaubc2gdxts"

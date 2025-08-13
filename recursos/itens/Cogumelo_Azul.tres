@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=6 format=3 uid="uid://d1sm2qgic0aom"]
+
+[ext_resource type="Texture2D" uid="uid://bs367usaa83w6" path="res://Assets/graficos/IconesItens/Colectable_Items_Icons.png" id="1_oq450"]
+[ext_resource type="Script" uid="uid://cj5tlwy2w3omu" path="res://Scripts/ItemResource.gd" id="1_wej84"]
+[ext_resource type="Texture2D" uid="uid://dafp0ohcxx2nb" path="res://Assets/graficos/MundoGraficos/Interact_Items.png" id="3_du8wj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du8wj"]
+atlas = ExtResource("1_oq450")
+region = Rect2(136, 8, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhwkf"]
+atlas = ExtResource("3_du8wj")
+region = Rect2(64, 448, 29, 32)
+
+[resource]
+script = ExtResource("1_wej84")
+nome = "Cogumelo Azul"
+descricao = "Pode ser usado para domesticar alguns familiares."
+icone = SubResource("AtlasTexture_du8wj")
+sprite_mundo = SubResource("AtlasTexture_dhwkf")
+usavel_em_batalha = true
+usavel_no_mapa = false
+quantidade_maxima = 10
+tipo_de_efeito = 2
+potencia_do_efeito = 20
+metadata/_custom_type_script = "uid://cj5tlwy2w3omu"

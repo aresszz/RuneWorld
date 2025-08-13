@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds4uadsxg113c"]
+
+[ext_resource type="Texture2D" uid="uid://drkn5u4nftlwi" path="res://recursos/UI/slot_background.tres" id="1_3d6qc"]
+[ext_resource type="Script" uid="uid://dhrw26p2myf87" path="res://Scripts/slot_inventario.gd" id="2_5hnxp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3d6qc"]
+texture = ExtResource("1_3d6qc")
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[node name="SlotInventario" type="Panel"]
+custom_minimum_size = Vector2(34, 34)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3d6qc")
+script = ExtResource("2_5hnxp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="IconeItem" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+expand_mode = 3
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

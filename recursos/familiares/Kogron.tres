@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="FamiliarResource" load_steps=7 format=3 uid="uid://d4cioglqkcp1b"]
+
+[ext_resource type="Script" uid="uid://b8jaubc2gdxts" path="res://Scripts/FamiliarResource.gd" id="1_7efey"]
+[ext_resource type="Texture2D" uid="uid://o8m5532743e" path="res://Assets/graficos/IconesItens/Familiar_Inventory_Icon.png" id="1_b81py"]
+[ext_resource type="Texture2D" uid="uid://deq07o4eaoyuh" path="res://Assets/graficos/FamiliarGraficos/Kogron.png" id="3_qs34x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vaqpu"]
+atlas = ExtResource("1_b81py")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftjvb"]
+atlas = ExtResource("3_qs34x")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fr6hm"]
+atlas = ExtResource("3_qs34x")
+region = Rect2(0, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_7efey")
+nome = "Kogron"
+descricao = "Fairy Dragon
+"
+sprite_frente = SubResource("AtlasTexture_fr6hm")
+sprite_costas = SubResource("AtlasTexture_ftjvb")
+icone = SubResource("AtlasTexture_vaqpu")
+vida_maxima = 10
+ataque = 5
+defesa = 5
+velocidade = 5
+ataque_especial = 5
+defesa_especial = 5
+metadata/_custom_type_script = "uid://b8jaubc2gdxts"

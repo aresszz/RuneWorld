@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlpmnxla6uq0l"]
+
+[ext_resource type="Script" uid="uid://cmmrx08tfland" path="res://Scripts/planta_coletavel.gd" id="1_kasul"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kd5ld"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qp642"]
+radius = 16.2788
+
+[node name="PlantaColetavel" type="StaticBody2D"]
+collision_layer = 2
+script = ExtResource("1_kasul")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D_Solida" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kd5ld")
+
+[node name="RespawnTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AreaDeInteracao" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D_Interacao" type="CollisionShape2D" parent="AreaDeInteracao"]
+shape = SubResource("CircleShape2D_qp642")
+
+[connection signal="timeout" from="RespawnTimer" to="." method="_on_respawn_timer_timeout"]
+[connection signal="body_entered" from="AreaDeInteracao" to="." method="_on_area_de_interacao_body_entered"]
+[connection signal="body_exited" from="AreaDeInteracao" to="." method="_on_area_de_interacao_body_exited"]

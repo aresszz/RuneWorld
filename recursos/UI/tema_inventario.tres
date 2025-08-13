@@ -1,0 +1,56 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://su3dytrdgd57"]
+
+[ext_resource type="FontFile" uid="uid://8wl1bmqbvabx" path="res://Assets/fontes/dogicapixel.ttf" id="1_auyhr"]
+[ext_resource type="FontFile" uid="uid://cihlbph1ya5jb" path="res://Assets/fontes/dogica.ttf" id="1_g264u"]
+[ext_resource type="Texture2D" uid="uid://jup4o76xa3uk" path="res://Assets/graficos/UiGraficos/UI_diary.png" id="2_7mcq1"]
+[ext_resource type="Texture2D" uid="uid://dsjlpvy5cp72g" path="res://recursos/UI/ButtonNormal.tres" id="2_bh7gv"]
+[ext_resource type="Texture2D" uid="uid://dixegmrbyw30o" path="res://recursos/UI/ButtonPressed.tres" id="3_e61sc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72osx"]
+texture = ExtResource("2_bh7gv")
+expand_margin_left = 16.0
+expand_margin_top = 16.0
+expand_margin_right = 16.0
+expand_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_auyhr"]
+texture = ExtResource("2_bh7gv")
+expand_margin_left = 16.0
+expand_margin_top = 16.0
+expand_margin_right = 16.0
+expand_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmm5r"]
+texture = ExtResource("3_e61sc")
+expand_margin_left = 16.0
+expand_margin_top = 16.0
+expand_margin_right = 16.0
+expand_margin_bottom = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56c6q"]
+atlas = ExtResource("2_7mcq1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g264u"]
+texture = SubResource("AtlasTexture_56c6q")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[resource]
+default_font = ExtResource("1_g264u")
+default_font_size = 14
+Button/colors/font_color = Color(0.591735, 0.369908, 0.126527, 1)
+Button/colors/font_pressed_color = Color(0.592157, 0.368627, 0.12549, 1)
+Button/colors/icon_hover_color = Color(0.592157, 0.368627, 0.12549, 1)
+Button/constants/align_to_largest_stylebox = 1
+Button/constants/h_separation = 5
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_g264u")
+Button/styles/hover = SubResource("StyleBoxTexture_72osx")
+Button/styles/normal = SubResource("StyleBoxTexture_auyhr")
+Button/styles/pressed = SubResource("StyleBoxTexture_cmm5r")
+Label/colors/font_color = Color(0.775347, 0.604071, 0.316581, 1)
+Label/font_sizes/font_size = 22
+Label/fonts/font = ExtResource("1_auyhr")
+Panel/styles/panel = SubResource("StyleBoxTexture_g264u")

@@ -1,0 +1,228 @@
+[gd_scene load_steps=27 format=3 uid="uid://bb03qln1igxpp"]
+
+[ext_resource type="Script" uid="uid://5y15lkve44hp" path="res://Scripts/jogador.gd" id="1_mnjxl"]
+[ext_resource type="Texture2D" uid="uid://bifun641og578" path="res://Assets/graficos/PersonagemGraficos/Player01.png" id="1_pexwo"]
+[ext_resource type="Texture2D" uid="uid://rxxix5iqrwui" path="res://Assets/graficos/PersonagemGraficos/Player_static.png" id="2_mnjxl"]
+[ext_resource type="AudioStream" uid="uid://cgaf33oxm3c5j" path="res://Assets/audio/stepstep.wav" id="4_xctj2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xctj2"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0avg"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_na1gr"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yc8d"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wewgn"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5ccg"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8h6g"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycn22"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80wdn"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1scl1"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsltd"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5scf"]
+atlas = ExtResource("1_pexwo")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l76p3"]
+atlas = ExtResource("2_mnjxl")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy65p"]
+atlas = ExtResource("2_mnjxl")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2xcj"]
+atlas = ExtResource("2_mnjxl")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is66w"]
+atlas = ExtResource("2_mnjxl")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ep77u"]
+atlas = ExtResource("2_mnjxl")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3xkb"]
+atlas = ExtResource("2_mnjxl")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cq0oj"]
+atlas = ExtResource("2_mnjxl")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad4jq"]
+atlas = ExtResource("2_mnjxl")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_64dfb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xctj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0avg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_na1gr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yc8d")
+}],
+"loop": true,
+"name": &"andando_baixo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wewgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5ccg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8h6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycn22")
+}],
+"loop": true,
+"name": &"andando_cima",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80wdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1scl1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsltd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5scf")
+}],
+"loop": true,
+"name": &"andando_direita",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"andando_esquerda",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l76p3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy65p")
+}],
+"loop": true,
+"name": &"parado_baixo",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2xcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is66w")
+}],
+"loop": true,
+"name": &"parado_cima",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ep77u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3xkb")
+}],
+"loop": true,
+"name": &"parado_direita",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cq0oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ad4jq")
+}],
+"loop": true,
+"name": &"parado_esquerda",
+"speed": 1.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0gv3o"]
+radius = 14.0
+height = 44.0
+
+[node name="Jogador" type="CharacterBody2D" groups=["player"]]
+process_mode = 3
+collision_mask = 2
+script = ExtResource("1_mnjxl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_64dfb")
+animation = &"parado_baixo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 9)
+shape = SubResource("CapsuleShape2D_0gv3o")
+
+[node name="AudioPoolPassos" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioPoolPassos"]
+stream = ExtResource("4_xctj2")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="AudioPoolPassos"]
+stream = ExtResource("4_xctj2")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="AudioPoolPassos"]
+stream = ExtResource("4_xctj2")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="AudioPoolPassos"]
+stream = ExtResource("4_xctj2")
+
+[node name="AnimacaoTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="timeout" from="AnimacaoTimer" to="." method="_on_animacao_timer_timeout"]

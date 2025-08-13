@@ -1,0 +1,202 @@
+[gd_scene load_steps=23 format=3 uid="uid://t8tske15na2s"]
+
+[ext_resource type="Theme" uid="uid://su3dytrdgd57" path="res://recursos/UI/tema_inventario.tres" id="1_3mnvc"]
+[ext_resource type="Script" uid="uid://kow0pcs7e4wr" path="res://Scripts/ui_inventario.gd" id="1_yduky"]
+[ext_resource type="Texture2D" uid="uid://dkyrjbeesp52o" path="res://Assets/graficos/UiGraficos/Chracter_iventory (1).png" id="3_3nryg"]
+[ext_resource type="Texture2D" uid="uid://cfyjqmqkjl1qq" path="res://recursos/UI/popup_backgorund.tres" id="4_3nryg"]
+[ext_resource type="Texture2D" uid="uid://bsl7rfwfllf4a" path="res://recursos/UI/AnelSeletor.tres" id="4_c3crn"]
+[ext_resource type="Texture2D" uid="uid://ootm7cnmq5y2" path="res://recursos/UI/ConfigPressed.tres" id="5_f4hyf"]
+[ext_resource type="Texture2D" uid="uid://c8lflkq1tbybu" path="res://recursos/UI/Salvar.tres" id="5_mbsyl"]
+[ext_resource type="Texture2D" uid="uid://bjmwvgje4wipa" path="res://recursos/UI/SalvarPressed.tres" id="6_c3crn"]
+[ext_resource type="Texture2D" uid="uid://cm4e1jqvsgurq" path="res://recursos/UI/Config.tres" id="6_d66yn"]
+[ext_resource type="Texture2D" uid="uid://dmx7vi0a7vw6u" path="res://recursos/UI/DiscardButton.tres" id="9_hyj4u"]
+[ext_resource type="Script" uid="uid://bdbfndgj7r5sv" path="res://Scripts/area_lixeira.gd" id="10_wdy42"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lji1a"]
+atlas = ExtResource("3_3nryg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_de4ja"]
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fmdag"]
+texture = ExtResource("5_mbsyl")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hyj4u"]
+texture = ExtResource("6_c3crn")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wdy42"]
+texture = ExtResource("5_mbsyl")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndh1g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f4hyf"]
+texture = ExtResource("6_d66yn")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mbsyl"]
+texture = ExtResource("5_f4hyf")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c3crn"]
+texture = ExtResource("6_d66yn")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_il5m0"]
+texture = ExtResource("9_hyj4u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lji1a"]
+texture = ExtResource("4_3nryg")
+texture_margin_left = 4.0
+texture_margin_top = 6.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[node name="UI_inventario" type="CanvasLayer" groups=["ui_inventario"]]
+process_mode = 3
+script = ExtResource("1_yduky")
+metadata/_edit_use_anchors_ = true
+
+[node name="Container" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3mnvc")
+
+[node name="Panel" type="Panel" parent="Container"]
+custom_minimum_size = Vector2(800, 450)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.446875
+anchor_top = 0.435185
+anchor_right = 0.534375
+anchor_bottom = 0.514815
+offset_left = -400.0
+offset_top = -225.0
+offset_right = 400.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Container/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.040724
+anchor_top = -0.00202843
+anchor_right = 0.0972851
+anchor_bottom = 0.115619
+offset_left = 457.0
+offset_top = 59.0
+offset_right = 745.0
+offset_bottom = 395.0
+texture = SubResource("AtlasTexture_lji1a")
+metadata/_edit_use_anchors_ = true
+
+[node name="GridContainer" type="GridContainer" parent="Container/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00226244
+anchor_top = 0.0466534
+anchor_right = 0.107466
+anchor_bottom = 0.107505
+offset_left = 498.0
+offset_top = 244.0
+offset_right = 684.0
+offset_bottom = 309.0
+mouse_filter = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 9
+metadata/_edit_use_anchors_ = true
+
+[node name="Salvar" type="Button" parent="Container/Panel"]
+custom_minimum_size = Vector2(229, 0)
+layout_mode = 2
+offset_left = 91.0
+offset_top = 94.0001
+offset_right = 371.0
+offset_bottom = 155.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_de4ja")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fmdag")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hyj4u")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wdy42")
+
+[node name="Opções" type="Button" parent="Container/Panel"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+offset_left = 91.0
+offset_top = 182.0
+offset_right = 163.0
+offset_bottom = 246.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_ndh1g")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f4hyf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mbsyl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_c3crn")
+text = "
+
+"
+
+[node name="AnelSeletor" type="TextureRect" parent="Container/Panel"]
+z_index = 1
+custom_minimum_size = Vector2(37, 36)
+layout_mode = 2
+offset_left = 500.0
+offset_top = 267.0
+offset_right = 530.0
+offset_bottom = 297.0
+mouse_filter = 2
+texture = ExtResource("4_c3crn")
+
+[node name="AreaLixeira" type="Panel" parent="Container/Panel"]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 222.0
+offset_right = 499.0
+offset_bottom = 246.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_il5m0")
+script = ExtResource("10_wdy42")
+
+[node name="Popupinfo" type="PanelContainer" parent="Container"]
+visible = false
+layout_mode = 0
+offset_left = 257.0
+offset_top = 276.0
+offset_right = 317.0
+offset_bottom = 324.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_lji1a")
+
+[node name="Popuplabel" type="Label" parent="Container/Popupinfo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 10
+
+[connection signal="pressed" from="Container/Panel/Salvar" to="." method="_on_salvar_pressed"]
+[connection signal="pressed" from="Container/Panel/Opções" to="." method="_on_opções_pressed"]
